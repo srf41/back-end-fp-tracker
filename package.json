@@ -1,0 +1,19 @@
+{
+  "name": "back-end-fp-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srf41/back-end-fp-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srf41/back-end-fp-tracker/issues"
+  },
+  "homepage": "https://github.com/srf41/back-end-fp-tracker#readme",
+  "description": ""
+}
