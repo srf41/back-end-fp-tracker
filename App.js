@@ -1,23 +1,20 @@
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
-import axios from 'axios';
-import './App.css';
+const userRoutes = require('./routes/users');
+const foodpointRoutes = require('./routes/foodpoints');
+const blockedDayRoutes = require('./routes/blockedDays');
+const summaryRoutes = require('./routes/summary');
 
-//data will be the string we send from our server
-const apiCall = () => {
-  axios.get('http://localhost:8080').then((data) => {
-    //this console.log will be in our frontend console
-    console.log(data)
-  })
-}
+const app = express();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+app.use(cors());
+app.use(bodyParser.json());
 
-        <button onClick={apiCall}>Make API Call</button>
+app.use('/users', userRoutes);
+app.use('/foodpoints', foodpointRoutes);
+app.use('/blocked-days', blockedDayRoutes);
+app.use('/summary', summaryRoutes);
 
-      </header> 
-    </div>
-  );
-}
+module.exports = app;
